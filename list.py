@@ -46,3 +46,11 @@ print(num_list)
 
 num_list.clear()
 print(num_list)
+
+#다양한 자료형 함께 사용
+mix_list = ["조세호", 1, True]
+num_list = [5,2,4,1,2,3,7,9]
+print(mix_list)
+
+mix_list.extend(num_list)
+print(mix_list)
