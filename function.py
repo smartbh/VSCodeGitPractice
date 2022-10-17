@@ -1,5 +1,7 @@
 from tkinter import commondialog
 
+from pip import main
+
 
 def open_account():
     print("새로운 계좌가 생성되었습니다.")
@@ -44,3 +46,30 @@ def profile(name, age = 17, main_lang = "한국어"):
 
 profile("김태호",16,"파이썬")
 profile("유재석")
+
+#키워드
+
+def profile(name, age, main_lang):
+    print(name, age, main_lang)
+
+#함수에서 전달받는 매개변수들을 키워드 =로 넣어주면
+#매개변수 순서가 바뀌어도 매개변수를 잘 입력할수있다.
+profile(name = "유재석", main_lang="파이썬",age=20)
+
+
+
+#가변인자
+# def profile(name, age, main_lang, lang1,lang2,lang3):
+#     print("이름 : {0}\t나이:{1}\t".format(name,age), end=" ")
+#     print(main_lang,lang1,lang2,lang3)
+
+#서로 다른 개수의 값을 넣어줄때는 *로 시작되는 가변인자 매개변수도 가능
+def profile(name, age, *language):
+    print("이름 : {0}\t나이:{1}\t".format(name,age), end=" ")
+    for lang in language:
+        print(lang, end = " ")
+    print()
+
+profile("유재석",20,"python","java","c++","c")
+profile("김태호",20,"코틀린","스위프트")
+
