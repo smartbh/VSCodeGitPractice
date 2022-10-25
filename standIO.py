@@ -24,5 +24,10 @@ import sys
 # for num in range(1,21):
 #     print("대기번호 : " + str(num).zfill(3))
 
-answer = input("아무 값이나 입력하세요:")
+#answer = input("아무 값이나 입력하세요:")
+answer = 10
 print(type(answer))
+
+#사용자 입력(input)으로 값을 받게 되면 무조건 문자열로 받아옴
+
+
